@@ -38,3 +38,14 @@ LIMIT 10;
 SELECT artist_name, AVG(popularity)
 FROM Spotifydata
 GROUP BY artist_name;
+
+#Creating a temporary table find artists with popularity over 90 and label them as "Top Stars"
+WITH popularity_average AS (
+SELECT
+artist_name, avg(popularity) pop
+FROM Spotifydata
+GROUP BY artist_name
+)
+SELECT artist_name, pop, "Top Star" AS Tag
+FROM popularity_average
+WHERE pop >= 90;
