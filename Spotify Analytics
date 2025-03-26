@@ -39,7 +39,7 @@ SELECT artist_name, AVG(popularity)
 FROM Spotifydata
 GROUP BY artist_name;
 
-#Creating a temporary table find artists with popularity over 90 and label them as "Top Stars"
+#Creating a temporary table to find artists with popularity over 90 and label them as "Top Stars"
 WITH popularity_average AS (
 SELECT
 artist_name, avg(popularity) pop
