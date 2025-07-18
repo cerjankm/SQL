@@ -49,3 +49,13 @@ GROUP BY artist_name
 SELECT artist_name, pop, "Top Star" AS Tag
 FROM popularity_average
 WHERE pop >= 90;
+
+#Does danceability affect the popularity of a song in the Top 10?
+SELECT SpotifyData.artist_name
+, SpotifyData.track_name
+, SpotifyData.popularity
+, SpotifyData.danceability
+FROM SpotifyData
+ORDER BY SpotifyData.popularity DESC
+LIMIT 10
+; 
