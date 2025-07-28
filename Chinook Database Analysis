@@ -1,4 +1,4 @@
-## This was an analysis project from my Chinook Zip in my reposityory
+## This was an analysis project from my Chinook.db file in my reposityory
 
 ## Show Customers (their full names, customer ID, and country) who are not in the US. (Hint: != or <> can be used to say "is not equal to").
 SELECT customers.CustomerId
